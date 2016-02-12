@@ -1,13 +1,14 @@
 using System;
-using Windows.UI.Xaml;
 using System.Threading.Tasks;
 using togglUWP.Services.SettingsServices;
+using togglUWP.ViewModels;
+using togglUWP.Views;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.Xaml;
 
 namespace togglUWP
 {
-    /// Documentation on APIs used in this page:
-    /// https://github.com/Windows-XAML/Template10/wiki
+    /// Documentation on APIs used in this page: https://github.com/Windows-XAML/Template10/wiki
 
     sealed partial class App : Template10.Common.BootStrapper
     {
@@ -23,12 +24,16 @@ namespace togglUWP
             CacheMaxDuration = _settings.CacheMaxDuration;
             ShowShellBackButton = _settings.UseShellBackButton;
 
-            #endregion
+            #endregion App settings
         }
 
         // runs even if restored from state
         public override Task OnInitializeAsync(IActivatedEventArgs args)
         {
+            var keys = PageKeys<Pages>();
+            keys.Add(Pages.MainPage, typeof(MainPage));
+            keys.Add(Pages.SettingsPage, typeof(SettingsPage));
+
             // content may already be shell when resuming
             if ((Window.Current.Content as Views.Shell) == null)
             {
@@ -47,4 +52,3 @@ namespace togglUWP
         }
     }
 }
-

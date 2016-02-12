@@ -1,3 +1,4 @@
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Threading.Tasks;
 using Template10.Mvvm;
@@ -14,7 +15,7 @@ namespace togglUWP.ViewModels
 
     public class SettingsPartViewModel : ViewModelBase
     {
-        Services.SettingsServices.SettingsService _settings;
+        private Services.SettingsServices.SettingsService _settings;
 
         public SettingsPartViewModel()
         {
@@ -41,24 +42,39 @@ namespace togglUWP.ViewModels
         }
 
         private string _BusyText = "Please wait...";
+
         public string BusyText
         {
-            get { return _BusyText; }
+            get
+            {
+                return _BusyText;
+            }
             set
             {
                 Set(ref _BusyText, value);
-                _ShowBusyCommand.RaiseCanExecuteChanged();
             }
         }
 
-        DelegateCommand _ShowBusyCommand;
-        public DelegateCommand ShowBusyCommand
-            => _ShowBusyCommand ?? (_ShowBusyCommand = new DelegateCommand(async () =>
-                {
-                    Views.Shell.SetBusy(true, _BusyText);
-                    await Task.Delay(5000);
-                    Views.Shell.SetBusy(false);
-                }, () => !string.IsNullOrEmpty(BusyText)));
+        private RelayCommand _showBusyCommand;
+
+        /// <summary>
+        /// Gets the ShowBusyCommand.
+        /// </summary>
+        public RelayCommand ShowBusyCommand
+        {
+            get
+            {
+                return _showBusyCommand
+                    ?? (_showBusyCommand = new RelayCommand(ExecuteShowBusyCommand));
+            }
+        }
+
+        private async void ExecuteShowBusyCommand()
+        {
+            Views.Shell.SetBusy(true, _BusyText);
+            await Task.Delay(5000);
+            Views.Shell.SetBusy(false);
+        }
     }
 
     public class AboutPartViewModel : ViewModelBase
@@ -81,4 +97,3 @@ namespace togglUWP.ViewModels
         public Uri RateMe => new Uri("http://bing.com");
     }
 }
-
