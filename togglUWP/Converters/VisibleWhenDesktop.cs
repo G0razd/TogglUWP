@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Template10.Utils;
+using TogglUWP.Utils;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
-namespace togglUWP.Converters
+namespace TogglUWP.Converters
 {
     class VisibleWhenDesktop : IValueConverter
     {

@@ -1,8 +1,8 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="using:Template10.Controls"
-                    xmlns:local="using:togglUWP"
-                    xmlns:vm="using:togglUWP.ViewModels">
+                    xmlns:controls="using:TogglUWP.Controls"
+                    xmlns:local="using:TogglUWP"
+                    xmlns:vm="using:TogglUWP.ViewModels">
 
     <vm:ViewModelLocator x:Key="Locator" />
 

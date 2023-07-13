@@ -1,8 +1,8 @@
-using togglUWP.ViewModels;
+using TogglUWP.ViewModels;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Controls;
 
-namespace togglUWP.Views
+namespace TogglUWP.Views
 {
     public sealed partial class DetailPage : Page
     {

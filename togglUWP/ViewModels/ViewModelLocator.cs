@@ -1,7 +1,7 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 
-namespace togglUWP.ViewModels
+namespace TogglUWP.ViewModels
 {
     public enum Pages
     {

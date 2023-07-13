@@ -1,16 +1,16 @@
 using System;
 using System.Threading.Tasks;
-using togglUWP.Services.SettingsServices;
-using togglUWP.ViewModels;
-using togglUWP.Views;
+using TogglUWP.Services.SettingsServices;
+using TogglUWP.ViewModels;
+using TogglUWP.Views;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 
-namespace togglUWP
+namespace TogglUWP
 {
-    /// Documentation on APIs used in this page: https://github.com/Windows-XAML/Template10/wiki
+    /// Documentation on APIs used in this page: https://github.com/Windows-XAML/TogglUWP/wiki
 
-    sealed partial class App : Template10.Common.BootStrapper
+    sealed partial class App : TogglUWP.Common.BootStrapper
     {
         public App()
         {

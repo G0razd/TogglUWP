@@ -1,9 +1,9 @@
 using System;
-using Template10.Common;
-using Template10.Utils;
+using TogglUWP.Common;
+using TogglUWP.Utils;
 using Windows.UI.Xaml;
 
-namespace togglUWP.Services.SettingsServices
+namespace TogglUWP.Services.SettingsServices
 {
     public class SettingsService
     {
@@ -14,10 +14,10 @@ namespace togglUWP.Services.SettingsServices
             Instance = Instance ?? new SettingsService();
         }
 
-        Template10.Services.SettingsService.ISettingsHelper _helper;
+        TogglUWP.Services.SettingsService.ISettingsHelper _helper;
         private SettingsService()
         {
-            _helper = new Template10.Services.SettingsService.SettingsHelper();
+            _helper = new TogglUWP.Services.SettingsService.SettingsHelper();
         }
 
         public bool UseShellBackButton

@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace togglUWP.Views
+namespace TogglUWP.Views
 {
     public sealed partial class Busy : UserControl
     {

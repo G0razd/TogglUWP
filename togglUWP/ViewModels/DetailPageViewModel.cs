@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Template10.Common;
-using Template10.Mvvm;
-using Template10.Services.NavigationService;
+using TogglUWP.Common;
+using TogglUWP.Mvvm;
+using TogglUWP.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 
-namespace togglUWP.ViewModels
+namespace TogglUWP.ViewModels
 {
     public class DetailPageViewModel : ViewModelBase
     {

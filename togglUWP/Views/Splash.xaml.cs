@@ -3,9 +3,9 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace togglUWP.Views
+namespace TogglUWP.Views
 {
-    // DOCS: https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-SplashScreen
+    // DOCS: https://github.com/Windows-XAML/TogglUWP/wiki/Docs-%7C-SplashScreen
     public sealed partial class Splash : UserControl
     {
         public Splash(SplashScreen splashScreen)

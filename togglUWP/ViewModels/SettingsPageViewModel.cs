@@ -1,11 +1,11 @@
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Threading.Tasks;
-using Template10.Mvvm;
-using Template10.Services.SettingsService;
+using TogglUWP.Mvvm;
+using TogglUWP.Services.SettingsService;
 using Windows.UI.Xaml;
 
-namespace togglUWP.ViewModels
+namespace TogglUWP.ViewModels
 {
     public class SettingsPageViewModel : ViewModelBase
     {

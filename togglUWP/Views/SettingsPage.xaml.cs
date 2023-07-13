@@ -2,16 +2,16 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace togglUWP.Views
+namespace TogglUWP.Views
 {
     public sealed partial class SettingsPage : Page
     {
-        Template10.Services.SerializationService.ISerializationService _SerializationService;
+        TogglUWP.Services.SerializationService.ISerializationService _SerializationService;
 
         public SettingsPage()
         {
             InitializeComponent();
-            _SerializationService = Template10.Services.SerializationService.SerializationService.Json;
+            _SerializationService = TogglUWP.Services.SerializationService.SerializationService.Json;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

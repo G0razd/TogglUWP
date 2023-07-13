@@ -1,14 +1,14 @@
 using System.ComponentModel;
 using System.Linq;
-using Template10.Common;
-using Template10.Controls;
-using Template10.Services.NavigationService;
+using TogglUWP.Common;
+using TogglUWP.Controls;
+using TogglUWP.Services.NavigationService;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
 
-namespace togglUWP.Views
+namespace TogglUWP.Views
 {
-    // DOCS: https://github.com/Windows-XAML/Template10/wiki/Docs-%7C-SplitView
+    // DOCS: https://github.com/Windows-XAML/TogglUWP/wiki/Docs-%7C-SplitView
     public sealed partial class Shell : Page
     {
         public static Shell Instance { get; set; }
